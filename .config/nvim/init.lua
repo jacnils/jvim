@@ -55,6 +55,7 @@ Plugins = { -- Plugins to use
     }, -- Fuzzy-finding
     { '3rd/image.nvim' }, -- Images in Neovim
     { 'nvim-treesitter/nvim-treesitter' }, -- Better syntax highlighting
+    { 'nvim-treesitter/nvim-treesitter-context' }, -- Context at the top
     { 'akinsho/bufferline.nvim' }, -- Tabs
     { 'nvim-lualine/lualine.nvim' }, -- Status line
     { 'm4xshen/autoclose.nvim' }, -- Autoclose brackets
@@ -91,7 +92,7 @@ Plugins = { -- Plugins to use
         event = 'VeryLazy',
         opts = {},
     }, -- Autocorrect plugin
-    { 'ahmedkhalf/project.nvim',
+    { 'jacnils/project.nvim',
         dependencies = {
             'stevearc/overseer.nvim',
         },
