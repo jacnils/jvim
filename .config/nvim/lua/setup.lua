@@ -1,6 +1,6 @@
 --[[
             jacob's neovim configuration
-    -- https://git.jacob.site/jacob/jacob-nvim --
+    -- https://github.com/jacnils/jacob-nvim --
 ]]--
 
 --[[
@@ -36,3 +36,4 @@ require('bigfile_config')
 require('session_manager')
 require('lualine_config')
 require('ccc_config')
+require('copilot_config')

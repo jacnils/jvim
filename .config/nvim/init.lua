@@ -1,6 +1,6 @@
 --[[
             jacob's neovim configuration
-    -- https://git.jacob.site/jacob/jacob-nvim --
+    -- https://github.com/jacnils/jacob-nvim --
 ]]--
 
 local g = vim.g -- Convenient alias
@@ -26,6 +26,7 @@ Languages = { -- Languages to support - Used to configure highlighting
     'cpp', -- For C++
     'php', -- For PHP
     'lua', -- For Lua
+    'python', -- For Python
     'markdown', -- For Markdown
     'markdown_inline', -- Also for Markdown
     'meson', -- For meson
@@ -35,6 +36,7 @@ LanguageServers = { -- Language servers to use for LSP, run LspInstall <lang> to
     'cssls', -- For CSS
     'clangd', -- For C and C++
     'lua_ls', -- For Lua
+    'pyright', -- For Python
     'marksman', -- For Markdown
     'swift_mesonls', -- For meson
 }
@@ -113,6 +115,8 @@ Plugins = { -- Plugins to use
     { 'stevearc/aerial.nvim' }, -- Object viewer
     { 'caenrique/swap-buffers.nvim' }, -- Swap buffers
     { 'LunarVim/bigfile.nvim' }, -- Disable heavy features if the file is big
+    { 'zbirenbaum/copilot.lua' }, -- GitHub Copilot
+    { 'CopilotC-Nvim/CopilotChat.nvim' }, -- GitHub Copilot Chat
     { 'altermo/nxwm',
         branch = 'x11',
     }, -- GUI display
@@ -201,7 +205,7 @@ keymap('n', 'ZX',         '<cmd>q!<cr>',                                        
 keymap('n', 'Zz',         '<cmd>w!<cr>',                                            defaultKeybindOptions) -- Save
 keymap('n', '<C-A>',      'v/{<cr>%',                                               defaultKeybindOptions) -- Select an entire function
 keymap('n', '<C-e>',      '<cmd>NvimTreeToggle<cr>',                                defaultKeybindOptions) -- Toggle NvimTree
-keymap('n', '.',          '<cmd>Trouble toggle diagnostics<cr>',                                 defaultKeybindOptions) -- Toggle Trouble
+keymap('n', '.',          '<cmd>Trouble toggle diagnostics<cr>',                    defaultKeybindOptions) -- Toggle Trouble
 keymap('n', ',',          '<cmd>AerialToggle<cr>',                                  defaultKeybindOptions) -- Toggle Aerial
 keymap('n', '<leader>G',  '<cmd>Neogit<cr>',                                        defaultKeybindOptions) -- Toggle Neogit
 keymap('n', '<leader>gt', '<cmd>Gitsigns toggle_current_line_blame<cr>',            defaultKeybindOptions) -- Toggle current line blame

@@ -1,6 +1,6 @@
 --[[
             jacob's neovim configuration
-    -- https://git.jacob.site/jacob/jacob-nvim --
+    -- https://github.com/jacnils/jacob-nvim --
 ]]--
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'

@@ -1,6 +1,6 @@
 --[[
             jacob's neovim configuration
-    -- https://git.jacob.site/jacob/jacob-nvim --
+    -- https://github.com/jacnils/jacob-nvim --
 ]]--
 
 -- Hardcoded because I doubt anyone cares to change this.

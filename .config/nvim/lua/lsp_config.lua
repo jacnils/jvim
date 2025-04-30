@@ -1,6 +1,6 @@
 --[[
             jacob's neovim configuration
-    -- https://git.jacob.site/jacob/jacob-nvim --
+    -- https://github.com/jacnils/jacob-nvim --
 ]]--
 
 local kindIcons = {
@@ -31,11 +31,27 @@ local kindIcons = {
     TypeParameter = "",
 }
 
+--[[ for nvim <11
 vim.fn.sign_define('DiagnosticSignError', {text = '', numhl = 'DiagnosticDefaultError'})
 vim.fn.sign_define('DiagnosticSignInformation', {text = '', numhl = 'DiagnosticDefaultInformation'})
 vim.fn.sign_define('DiagnosticSignHint', {text = '', numhl = 'DiagnosticDefaultHint'})
 vim.fn.sign_define('DiagnosticSignInfo', {text = '', numhl = 'DiagnosticDefaultInfo'})
 vim.fn.sign_define('DiagnosticSignWarn', {text = '', numhl = 'DiagnosticDefaultWarn'})
+--]]
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = "●",
+    },
+    severity_sort = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "",
+            [vim.diagnostic.severity.WARN] = "",
+            [vim.diagnostic.severity.INFO] = "",
+            [vim.diagnostic.severity.HINT] = "",
+        },
+    },
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
